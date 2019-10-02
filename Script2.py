@@ -1,3 +1,9 @@
+# Name: Brissa Ramos, Mingshuang Lian
+# Assignment title: Project Script 2
+# Time to complete: 1 hour
+# Description: Imporves lab 3 by allowing the user to choose between fahrenheit or celsius.
+#              The user then sees how the temperature is according to their decision.
+
 #asks user for inputs
 #returns string 
 Temp = raw_input("Enter Fahrenheit or Celsius: ")

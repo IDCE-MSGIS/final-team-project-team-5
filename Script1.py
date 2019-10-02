@@ -1,3 +1,8 @@
+# Name: Brissa Ramos, Mingshuang Lian
+# Assignment title: Project Script 1
+# Time to complete: 30 min
+# Description: Provides the weather forcest of the users chosen location based on latitude and longitude
+
 # import required libraries
 import requests
 from bs4 import BeautifulSoup
@@ -9,6 +14,7 @@ forecast = []
 ## Lat/lon in decimal degrees provided for Worcester, MA
 #lat = '42.2634'
 #lon = '-71.8022'
+
 #asks user of longitude and latitude
 lat = input('Enter latitude: ')
 lon = input('Enter longitude: ')

@@ -1,35 +1,6 @@
 ## Script 1: Web-Scraping Weather Forecast Information
-### Web-scraping Weather Forecast Information with Python
-In this lab, you will work with a script that scrapes the 5-day weather forecast from the National Weather Service website. The script extracts information from multiple elements listed under the same class name using the BeautifulSoup library. 
 
-- Copy the **NWS_WeatherForecast.py** file and paste it into the online Python compiler: https://repl.it/languages/python
-Make sure you are using Python version 2.7. You can check the Python version in the compiler window on the right.
+The goal of the script is for the user to be able to have access of the weather data for any place they desire versus having a fixed place set in the script. We ensure that it can be easily run without the user needing to hardcode in Python their desired destination. The script will ask the user to enter both the longitude and latitude of their choice. The user will input a decimal or in Python a float. When we get the float, we then have to convert it into a string to be able to concatenate with the URL. When trying to figure out the conversion from a float to the string we went back to the book, page 19 of Think Python, where it gave some conversion examples. When converting, instead of making two new variables and calling it from the URL, we reassigned our variables ‘lat’ and ‘lon’, updating their value in a form of a string. Therefore we didn’t have to change the URL when concatenating, since it would just be concatenating the same variables. Furthermore, when fixing the spacing issues, it was pretty easy, since we referred back to our previous lab in which we manipulated the strings around using the same function replace(). However, one thing we did notice is that here, the only difference is the output. The output will change every time based one the location and time. We tried to find common patterns to fix as many spacing issues as we could. Lastly, we reassigned the variable ‘day’ just like we did when we converted to a string. At the end of the for loop, after we have fixed our spacings, we reassign ‘day’ to day.upper(). This makes the word in which were reading uppercase. Then it prints it out the word and continues to do so for every single one.
 
-- Read the description and comments in the script to understand the purpose of the script
-
-- Run the script. You will see some packages being installed in the compiler window when you run it for the first time.
-
-- The script returns the 5-day forecast for Worcester, MA (Lat: 42.2634, Lon: -71.8022) with the latitude and longitude information provided. Using the latitude and longitude values, it generates the following URL through string concatenation: https://forecast.weather.gov/MapClick.php?lat=42.2634&lon=-71.8022
-
-- Open this URL in a Firefox or Chrome browser. Locate the information that is being outputted in our script. Right click on this and select the Inspect Element option. This will launch the Inspector window that helps locate different elements on the page.
-
-- Notice that all forecast containers in this section are located in the _forecast-tombstone_ class inside the _li_ tag. In order to scrape multiple elements listed under the same class name, we utilize the _findAll()_ function from BeautifulSoup. The tag and class names are required arguments for this function.
-
-### Edit the NWS_ WeatherForecast.py script to add the following functionality:
-1. Take latitude and longitude values as inputs in decimal degrees from user
-
-2.	Convert the latitude and longitude values to strings to generate the URL for the selected location. Pass this URL as an argument in the _get()_ request.
-
-3.	The returned forecast information did not preserve its spacing during the scraping process. Using the _replace()_ function, fix any spacing issues with the output
-
-4.	Convert the final output to uppercase
-
-Remember to update the Script1.py file to include comments and documentation in your script to tell me what it’s doing!
-
-## Final Project: Script 2
-### Your Chosen Assignment
-For this script, you will complete the assignment that you have proposed, which involves modifying a previous exercise. Remember to update the Script2.py file to include comments and documentation in your script to tell me what it’s doing!
-
-## Final Project: Documentation
-### Changing this README
-Your write-up will be here, on this README page. You will need to edit this page with your new text: you do **not** need to keep these instructions on your README! 
+## Script 2: Feeling the Temperature Both in Fahrenheit and Celsius
+The goal of our script was to allow the user to be able to see how the temperature is, whether it be cold, hot, cool, or warm based on their choosing between Fahrenheit or Celsius. The user will be asked to choose either Fahrenheit or Celsius. Then would be asked to enter the temperature. From this, they will get a feel for how the weather is. We did this by creating two functions, one for Fahrenheit and another for Celsius, where we added four categories based on the temperature. When figuring out the Celsius categories we googled the temperature equivalent to Fahrenheit since we both didn’t know much about Celsius. We then added one more function where we would compare the first input, and call its function accordingly. For example, if the user entered Celsius, then the function for Celsius in which the categories are in, would be called. However, every time the user was asked to enter either Celsius or Fahrenheit, it would say “not defined.” We tried turning the input into string only by doing str(input()) and it still didn’t work. After a repeated amount of the same syntax error, we checked Stackoverflow, specifically https://stackoverflow.com/questions/4915361/whats-the-difference-between-raw-input-and-input-in-python3-x where we were able to see where we had gone wrong. We fixed our issue by using raw_input meaning it would return a string only for Python 2.7 specifically. After figuring out our issue, and running it, we would say this script functions pretty well. We would definitely use something like this or along the lines of converting between Fahrenheit and Celsius. We’ve both have had friends where they only know the temperature in Celsius. For example, they would tell us excitedly that the temperature will be 22. From this were able to enter the temperature in Celsius in order to understand that it’s going to be warm.

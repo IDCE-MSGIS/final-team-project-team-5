@@ -25,7 +25,7 @@ def tempCelsius(num):
   else:
     print "It is cold." 
 
-#functions for fahrenheit categories
+#function for fahrenheit categories
 def tempFahrenheit(num):
   if num >= 100:
     print "It is hot."

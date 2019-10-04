@@ -57,6 +57,9 @@ for day in forecast:
     day = day.replace('High', ' High')
     day = day.replace('Night', ' Night')
     day = day.replace('then', ' then')
+    day = day.replace('Showers','Showers ')
+    day = day.replace('Likely','Likely ')
+    day = day.replace('This', 'This ')
     #makes output uppercase
     day = day.upper()
     print day
